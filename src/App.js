@@ -1,15 +1,21 @@
 import React, { useState, useEffect } from 'react';
-import { fetchUser } from './scripts';
+import { fetchUser, listActivities } from './scripts';
 import logo from './logo.svg';
 import './App.css';
 
 function App() {
   const [user, setUser] = useState([]);
+  const [activities, setActivities] = useState([]);
 
   const getUser = async (search) => {
     const data = await fetchUser(search);
     setUser(data);
   };
+
+  const handleListActivityClick = async() => {
+    const data = await listActivities();
+    setActivities(data);
+  }
 
   useEffect(() => {
     getUser('jane_smith');
@@ -36,6 +42,14 @@ function App() {
           <p key={item.Username}>Name: {item.Username}</p>
         </div>
       )}
+      <button onClick={handleListActivityClick}>Show all activities</button>
+      <ul>
+        {activities.map((item, index) => 
+          <li key={index}>
+            {item.Destination} - {item.Country}
+          </li>
+        )}
+      </ul>
     </div>
   );
 }
