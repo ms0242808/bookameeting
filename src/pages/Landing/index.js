@@ -18,7 +18,7 @@ export default function Landing() {
 			<p className='font-normal text-gray-600 text-md md:text-xl mb-16'>
 				Pick a date
 				<Dot /> Find a room
-				<Dot /> Book it.
+				<Dot /> Book it
 			</p>
 			<DatePicker />
 		</div>
