@@ -46,7 +46,7 @@ const FindPage = () => {
 
 	const handleTimeSelect = (time) => setSelectedTime(time);
 
-	const handleBookItClick = () => navigate(`/booked`);
+	const handleBookItClick = () => navigate(`/booked?date=${date}&room=${selectedRoom.title}&time=${selectedTime}`);
 
 	return (
 		<div className='p-4'>

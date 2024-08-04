@@ -12,9 +12,9 @@ export default function Landing() {
 	});
 
 	return (
-		<div class='text-center'>
-			<h6 class='font-medium text-gray-600 text-lg md:text-2xl uppercase mb-8'>Book instantly</h6>
-			<h1 class='font-normal text-gray-900 text-4xl md:text-7xl leading-none mb-8'>Book a meeting room</h1>
+		<div className='text-center'>
+			<h6 className='font-medium text-gray-600 text-lg md:text-2xl uppercase mb-8'>Book instantly</h6>
+			<h1 className='font-normal text-gray-900 text-4xl md:text-7xl leading-none mb-8'>Book a meeting room</h1>
 			<p className='font-normal text-gray-600 text-md md:text-xl mb-16'>
 				Pick a date
 				<Dot /> Find a room
